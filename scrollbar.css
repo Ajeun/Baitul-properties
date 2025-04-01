@@ -1,0 +1,50 @@
+:root {
+    --lighter-color: rgb(161, 161, 161);
+    --darker-color:rgb(135, 135, 135);
+    --even-darker-color: rgb(119, 119, 119);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: none;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--lighter-color);
+    border-radius: 5px;
+    min-height: 40px;
+  }
+
+  /* Handle on Hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--darker-color);
+
+  }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: none;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--lighter-color);
+    border-radius: 5px;
+    min-height: 40px;
+  }
+
+  /* Handle on Hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--even-darker-color);
+  }

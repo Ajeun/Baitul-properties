@@ -1,0 +1,275 @@
+/* Google fonts import */
+
+/* Universal Styles */
+:root {
+    --primary-color: #234727;
+    --secondary-color: #2ecc71;
+    --background-color: #d2d2caf7;
+    --text-color: #163417;
+    --font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+
+}
+
+/* Universal h2 style */
+h2 {
+    font-size: 2rem; /* Slightly smaller than h1 */
+    color: #ffffff; /* White color */
+    text-transform: uppercase; /* Match the style of h1 */
+    letter-spacing: 1.5px; /* Slightly less spacing than h1 */
+    margin-bottom: 1rem; /* Add spacing below the h2 */
+    font-weight: 700px; /* Ensure bold text */
+    padding-top: 1rem; /* Add space above the h2 */
+}
+
+/* Section 0 Banner and Logo Styles */
+.logo h {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+/* Ensure white banner visibility */
+.banner {
+    background-color: #ffffff;
+    padding: 1rem 2rem;   
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure it appears above other content */
+    z-index: 1;
+}
+
+
+/* Navigation Styles */
+ul.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: left;
+    padding-left: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+ul.nav-links li {
+    margin-right: 1rem; /* Adjust the value to increase spacing */
+}
+ul.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+/* Navigation Links hover */
+ul.nav-links li a:hover {
+    color: var(--secondary-color);
+    background-color: var(--text-color);
+    border-radius: 5px;
+}
+
+/* Button Styling */
+.button {
+    color: var(--secondary-color);
+    background-color: var(--text-color);
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    margin-top: 1.3rem; /* Add space above the button */
+}
+
+.button:hover {
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+
+/* Section 1 Header Banner & 1st Paragraph */
+.header {
+    background-color: #ffffff;
+    padding: 2rem;
+    text-align: right;
+    width: 100%; /* Fix horizontal scrollbar issue */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    margin: 0; /* Remove margin to avoid overflow */
+}
+
+.header h1 {
+    font-size: 2.5rem; /* Adjusted for better visibility */
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem; /* Add space below the header */
+    padding: 0 1rem; /* Add padding for better spacing */
+    font-weight: bold; /* Make the header bold */
+}
+
+.header p {
+    max-width: 33.33%; /* Limit paragraph width to one-third of the page */
+    margin-left: auto; /* Push the paragraph to the right */
+    text-align: right; /* Align text to the right */
+    line-height: 1.8; /* Improve readability */
+    display: block; /* Ensure it stays below the header */
+    margin-bottom: 1rem; /* Add space below the paragraph */
+    padding: 0 1rem; /* Add padding for better spacing */
+    font-size: 1.2rem; /* Adjust font size for better readability */
+} 
+
+.header .button {
+    margin-right: 1rem; /* Add consistent spacing from the right edge */
+    text-align: right; /* Ensure alignment consistency */
+    padding: 0.5rem 1rem; /* Adjust padding for better spacing */
+    display: inline-block; /* Ensure proper button display */
+}
+
+/* About Us Section 2 Styles */
+.about {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+
+}
+
+.about::after {
+    content: "";
+    display: block;
+    clear: both; /* Clear floats to ensure the background extends properly */
+}
+
+.about {
+    padding-bottom: 1.5rem; /* Add extra space below the image */
+    padding-top: 2rem; /* Add space above the section */
+    padding-left: 1rem; /* Add space to the left of the section */
+    padding-right: 2rem; /* Add space to the right of the section */
+    overflow: hidden; /* Ensure the background extends fully */
+}
+
+.about h2 {
+    padding-top: 2rem;
+}
+
+.about img {
+    max-width: 49%; /* Limit the image to half the page width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove inline spacing */
+    margin: 2rem 4rem 2rem 2rem; /* Add space around the image (top, right, bottom, left) */
+    object-fit: cover; /* Crop the image */
+    object-position: center left; /* Focus on the center-left of the image */
+    transition: transform 0.3s ease; /* Smooth zoom-in effect */
+    float: left; /* Align the image to the left-hand side */
+}
+
+.about .button {
+    margin-top: 1.3rem; /* Add space above the button */ 
+}
+
+/* Projects Section 3 */
+/* Project Card styles */
+.projects h2 {
+    margin-left: 4.2rem; /* Add margin to move the h2 further right */
+    text-align: left; /* Ensure the text aligns properly */
+    color: var(--text-color); /* Set text color to match the theme */
+    margin-top: 2rem; /* Add space above the h2 */
+}
+
+.project-container {
+    display: flex; /* Arrange the cards in a row */
+    gap: 1.5rem; /* Add space between the cards */
+    flex-wrap: wrap; /* Allow wrapping to the next row if needed */
+    justify-content: center; /* Center the cards horizontally */
+    padding: 2rem; /* Add padding around the container */
+}
+
+.project1-container, .project2-container, .project3-container {
+    background-color: #ffffff; /* White background for the cards */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    padding: 1rem; /* Add padding inside the cards */
+    width: 400px; /* Increased width for the cards */
+    height: 500px; /* Increase height to make the cards longer */
+    text-align: center; /* Center-align the content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    overflow: hidden; /* Ensure content stays within the card */
+}
+
+.project1-container img, .project2-container img, .project3-container img {
+    width: 95%; /* Increase image size while keeping it responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image fills the space */
+    border-radius: 4px; /* Match the card's rounded corners */
+    margin: 1rem 0 1rem 0; /* Add spacing below the image */
+}
+.contact iframe {
+    width: 80%; /* Reduce width to fit better on the page */
+    height: 500px; /* Increase height to make the form longer */
+    border: none; /* Remove the default border */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 2rem auto; /* Center the iframe and add vertical spacing */
+    display: block; /* Ensure proper centering */
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 2rem;
+    text-align: left;
+}
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 2rem;
+    text-align: left; /* Align content to the left */
+    font-family: var(--font-family);
+    position: relative;
+}
+
+footer p {
+    margin: 0.5rem 0; /* Add spacing between lines */
+    font-size: 1.1rem; /* Adjust font size for readability */
+}
+
+footer p span {
+    display: block; /* Ensure spans are on separate lines */
+    margin-top: 0.5rem; /* Add spacing between spans */
+}
+
+footer .social-media-icons {
+    margin-top: 1.2rem; /* Add spacing above the icons */
+    display: flex; /* Use flexbox for alignment */
+    gap: 1.1rem; /* Add spacing between icons */
+    justify-content: flex-start; /* Align icons to the left */
+}
+
+footer .social-media-icons i {
+    color: #ffffff; /* Set icons to white */
+    font-size: 1.5rem; /* Increase icon size */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    text-decoration: none; /* Remove any text decoration */
+    display: inline-block; /* Ensure proper alignment */
+}
+
+footer .social-media-icons i:hover {
+    color: var(--secondary-color); /* Change color on hover */
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+
