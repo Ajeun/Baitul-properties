@@ -70,9 +70,13 @@
 /* ---------------- Mobile Phones (Portrait, ~480px and below) ---------------- */
 
 @media screen and (max-width: 480px) {
-    .text-overlay {
-        font-size: 2em; /* Smaller text size for mobile */
+    .text-overlay p {
+        font-size: 1em; /* Smaller text size for mobile */
         padding: 10px; /* Reduced padding for mobile */
+    }
+
+    .slideshow-container {
+        height: 50vh; /* Reduced height for mobile */
     }
   }
   
