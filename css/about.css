@@ -104,13 +104,12 @@
     }
 
     .about-text h1 {
-      font-size: 1.5rem;
+      font-size: 1.45rem;
     }
 
     .about-text-content{
-      font-size: 1.1rem;
-      padding-bottom: 20px;
-      margin: 20px 34px;
+      font-size: 1.05rem;
+      margin: 5px 30px 40px 30px;
     }
   }
   
