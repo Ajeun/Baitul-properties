@@ -66,3 +66,20 @@
     /* Gradually fade to semi-transparent */
     100% { opacity: 0.7; } /* Fully transparent at the end */
 }
+
+/* ---------------- Mobile Phones (Portrait, ~480px and below) ---------------- */
+
+@media screen and (max-width: 480px) {
+    .text-overlay {
+        font-size: 2em; /* Smaller text size for mobile */
+        padding: 10px; /* Reduced padding for mobile */
+    }
+  }
+  
+  /* ---------------- Tablets (Portrait, e.g., iPad ~768px) ---------------- */
+  
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    
+  }
+  
+ 
