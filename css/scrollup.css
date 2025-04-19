@@ -1,0 +1,64 @@
+/* -------------------- Scroll to Top ------------------------- */
+.scroll-up-popup {
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    transform: translateX(-100%); /* completely hidden */
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  /* This is just a flag so JS can allow hover-based reveal */
+  .scroll-up-popup.visible {
+    opacity: 0.1;
+    transform: translateX(-20px); /* peek out slightly */
+    pointer-events: auto;
+  }
+  
+  /* Slide out fully when hovering the edge area */
+  .scroll-up-hover-area:hover ~ .scroll-up-popup.visible,
+  .scroll-up-popup.visible:hover {
+    opacity: 1;
+    transform: translateX(8px);
+  }
+  
+  .scroll-up-popup a {
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  /* The actual up arrow button */
+  .scroll-up-icon {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 24px;
+    padding: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scroll-up-icon:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.1);
+    color: #e0e0e0;
+  }
+  
+  /* Invisible hover zone for revealing the icon */
+  .scroll-up-hover-area {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 65px;
+    height: 110px;
+    z-index: 500;
+  }  

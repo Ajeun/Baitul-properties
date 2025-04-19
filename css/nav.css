@@ -1,0 +1,160 @@
+/* --------------------- Navigation Styles --------------------- */
+nav {
+    height: 58%;
+    max-width: 20vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    width: 200px;
+    z-index: 2;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); 
+}
+
+nav a {
+    height: 100%;
+    text-decoration: none;
+    align-items: center;
+    color: var(--text-color);
+    font-weight: 600; /* Added font weight for emphasis */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    justify-content: flex-start; /* Align items to the top */
+    font-size: 2rem;
+    padding: 40px 0; /* Add padding at the top to push content down */
+    margin: 0;
+}
+
+nav ul li {
+    margin: 5px 0; /* Add vertical margin to increase the gap between rows */
+    text-decoration: none;
+    font-size: 1.2rem; /* Reduce font size to fit all text */
+    line-height: 1; /* Adjust line height for better spacing */
+    word-wrap: break-word; /* Ensure long text wraps within the container */
+}
+
+nav ul li a {
+    display: flex; /* Use flexbox for consistent alignment */
+    justify-content: center; /* Align text and hover effect */
+    align-items: center; /* Center align items vertically */
+    width: 150px; /* Ensure all links have the same width */
+    margin-left: 0; /* Remove left margin for consistency */
+    padding: 1rem; /* Adjust padding for better spacing */
+    margin-left: 32px;
+    position: relative; /* Ensure positioning is relative for better control */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for hover effect */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color); /* Colored box on hover */
+    color: var(--text-color); /* Ensure text color contrasts with the box */
+    border-radius: 5px; /* Optional: Add rounded corners to the box */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+
+nav li:nth-child(1) {
+    margin-top: 30px; 
+}
+
+nav.active {
+    transform: translateX(0);
+}
+
+/* Navigation */
+.menu-icon {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    z-index: 10;
+}
+
+    .menu-icon div {
+        height: 0.25rem;
+        background-color: var(--lighter-primary-color); /* Use a defined variable or a specific color */
+        transition: all 0.3s ease-in-out;
+    }
+
+.menu-icon .bar1, .bar2, .bar3 {
+    border-radius: 0.5rem;
+}
+
+
+.active .bar1 {
+    transform: translateY(0.6rem) rotate(-45deg);
+}
+
+.active .bar2 {
+    opacity: 0;
+}
+
+.active .bar3 {
+    transform: translateY(-0.75rem) rotate(45deg);
+}
+
+.nav-wrapper {
+    height: 60px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Small screens: phones (<= 768px) */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        position: absolute; /* Change from 'fixed' to 'absolute' so it stays at the top */
+        top: 15px;
+        left: 20px;
+        z-index: 999;
+    }
+
+    nav {
+        min-width: 40vw;
+        max-width: 75vw;
+        min-height: 362px;
+        max-height: fit-content; /* Set height to 58% of the viewport height */
+        position: absolute; /* Keeps nav from staying fixed on scroll */
+    }
+
+    nav ul li a {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        font-size: 1.3rem;
+        border-radius: 20px;
+    }
+
+    nav ul li a:nth-last-child {
+        margin-bottom: 0; /* Remove margin from the last item */
+    }
+}
+
+
+/* Adjust position for larger screens (tablet and up) */
+@media screen and (min-width: 769px) {
+    .menu-icon {
+        position: absolute; /* Keep it at the top of the page */
+        top: 15px;
+        left: 20px;
+        z-index: 999;
+    }
+
+    nav {
+        position: absolute; /* Still position the nav at the top, but not fixed on scroll */
+    }
+}

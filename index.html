@@ -1,90 +1,279 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="project-style" href="project-style.css">
-  <link rel="stylesheet" href="scrollbar.css">
-  <script src="https://kit.fontawesome.com/163ae0cd45.js" crossorigin="anonymous"></script>
+  <title>AP Design</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/scrollbar.css">
+  <link rel="stylesheet" href="css/nav.css">
+  
+  <link rel="stylesheet" href="css/slideshow.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/prices.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/scrollup.css">
 </head>
+<body>
 
 <!-- Section 0 Navigation -->
-<div class="banner">
-  <nav class="navbar">
-    <div class="logo">
-      <h>Baitul Properties</h>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#About">About</a></li>
-      <li><a href="#Projects">Projects</a></li>
-      <li><a href="#Contact">Contact</a></li>
-    </ul>
+
+<div class="nav-wrapper" id="nav-wrapper">
+  <div class="menu-icon" onclick="toggleMenu()">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+  <nav id="nav">
+      <ul>
+          <li><a href="#home" onclick="hideMenu()">Home</a></li>
+          <li><a href="#about" onclick="hideMenu()">About</a></li>
+          <li><a href="#portfolio" onclick="hideMenu()">Portfolio</a></li>
+          <li><a href="#prices" onclick="hideMenu()">Prices</a></li>
+          <li><a href="#contact" onclick="hideMenu()">Contact</a></li>
+     </ul>
   </nav>
 </div>
 
-<!-- Section 1 Header Banner -->
-<div class="header">
-  <h1>Baitul Properties</h1>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem iste, assumenda possimus voluptatibus recusandae adipisci alias temporibus reiciendis aliquid nam quam provident est! Facilis fugiat earum labore ea ullam.</p>
-  <a href="#About"><button class="button">Find out more</button></a>
-  <a href="#Projects"><button class="button">View our Projects</button></a>
-</div>
-
-<!-- Section 2 About the Company -->
-<div class="about">
-  <img src="/99-Kershaw-1.jpeg" alt="House Photograph">
-  <h2>About Us</h2>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa soluta blanditiis itaque enim sequi beatae tenetur quasi perspiciatis iste maiores facilis in eligendi officia, unde deleniti voluptas accusamus veniam ut?</p>
-  <a href="#Projects"><button class="button">View our Projects</button></a>
-</div>
-
-<!-- Section 3 Projects Slideshow Overview -->
-<div class="projects">
-  <h2>Our Projects</h2>
+  <!-- Section 0.5 Header Slideshow -->
+  <section id="home">
+  <div class="slideshow-container">
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 1">
+        <div class="text-overlay"><p>AP Design</p></div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 2">
+        <div class="text-overlay"><p>AP Design</p></div>
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 3">
+      <div class="text-overlay"><p>AP Design</p></div>
+  </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1564934304050-e9bb87a29c13?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 4">
+      <div class="text-overlay"><p>AP Design</p></div>
+  </div>
   <div class="slide">
-    <div class="project-container">
-      <div class="project1-container">
-        <img src="/99-Kershaw-1.jpeg" alt=" Kershaw Lane Property Photograph">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum id recusandae exercitationem tenetur nihil, molestias ducimus itaque explicabo rem cupiditate quia accusamus, consequuntur nobis illum! Ea mollitia dolores in.</p>
-        <a href="/99-Kershaw-lane.html"><button class="button">View KERSHAW LANE</button></a>
+    <img src="https://images.unsplash.com/photo-1513346940221-6f673d962e97?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 5">
+    <div class="text-overlay"><p>AP Design</p></div>
+</div>
+  </div>
+
+
+  <!-- Section 1 About -->
+  <section id="about" class="about-section">
+    <p class="text-mask">STAND OUT</p>
+    <div class="about-text">
+    <h1>About</h1>
+    <p class="about-text-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia rem facere magni praesentium, iure tenetur incidunt velit modi aut consequuntur eaque sunt qui et, reprehenderit excepturi beatae, at odit cumque <span class="pop"> Pop</span>.
+    </p>
+    </div>
+  </section>
+  
+  <!-- Section 2 Portfolio -->
+  <section id="portfolio" class="section">
+    <div class="typewriter-container">
+      <h1 class="typewriter">Portfolio</h1>
+    </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&" alt="">
+          <h2>1</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis excepturi quam dignissimos consectetur eligendi deserunt reprehenderit...</p>
+          <button class="btn">Explore More</button>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <h2>2</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, officiis a. Perspiciatis vero...</p>
+          <button class="btn">Explore More</button>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <h2>3</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro possimus ipsam tempora. Dolores ad deleniti quia alias...</p>
+          <button class="btn">Explore More</button>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?q=80&w=2703&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <h2>4</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et inventore, quidem obcaecati tempora cum. Voluptatem nobis provident, accusamus...</p>
+          <button class="btn">Explore More</button>
+        </div>
       </div>
-      <div class="project2-container">
-        <img src="/99-Kershaw-3.jpeg" alt="Old Farm Crescent Property Photograph">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum id recusandae exercitationem tenetur nihil, molestias ducimus itaque explicabo rem cupiditate quia accusamus, consequuntur nobis illum! Ea mollitia dolores in.</p>
-        <a href="#"><button class="button">View Old Farm Crescent</button></a>
-      </div>
-      <div class="project3-container">
-        <img src="/99-Kershaw-4.jpeg" alt="Next Property Photograph">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum id recusandae exercitationem tenetur nihil, molestias ducimus itaque explicabo rem cupiditate quia accusamus, consequuntur nobis illum! Ea mollitia dolores in.</p>
-        <a href="#"><button class="button">Coming Soon</button></a>
+    <input type="checkbox" id="read-more-toggle">
+    <!-- Wrapper for the 'Read More' Button -->
+  
+    <div class="read-more-wrapper">
+      <label for="read-more-toggle" class="read-more-label">
+        <span class="read-more-text">Read More</span>
+        <!-- SVG with spaced-out dots -->
+        <svg class="dots-svg" xmlns="http://www.w3.org/2000/svg" width="60" height="24" viewBox="0 0 60 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="10" cy="12" r="2"/>
+          <circle cx="30" cy="12" r="2"/>
+          <circle cx="50" cy="12" r="2"/>
+        </svg>
+      </label>
+    </div>
+    <div class="read-more-content">
+      <div class="card-container-2">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&" alt="">
+          <h2>5</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis excepturi quam dignissimos consectetur eligendi deserunt reprehenderit...</p>
+          <button class="btn">Explore More</button>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <h2>6</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, officiis a. Perspiciatis vero...</p>
+          <button class="btn">Explore More</button>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <h2>7</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro possimus ipsam tempora. Dolores ad deleniti quia alias...</p>
+          <button class="btn">Explore More</button>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?q=80&w=2703&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <h2>8</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et inventore, quidem obcaecati tempora cum. Voluptatem nobis provident, accusamus...</p>
+          <button class="btn">Explore More</button>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Section 3 Prices -->
+  <section id="prices" class="section">
+    <h1>Prices</h1>
+    <div class="price-cards">
+      <div class="price-card">
+        <div class="image-container">
+          <img src="https://images.unsplash.com/photo-1682685797229-b2930538da47?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D0" alt="Project 1">
+        </div>
+        <div class="card-overlay">
+          <h2>Project 1</h2>
+          <p>Lorem ipsum dolor sit amet, </p>
+            <ul>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+            </ul>
+          <span class="price-tag">£250</span>
+        </div>
+        <button onclick="location.href='#'">View Project</button>
+      </div>
+      <div class="price-card">
+        <div class="image-container">
+          <img src="https://images.unsplash.com/photo-1454372182658-c712e4c5a1db?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project 2">
+        </div>
+        <div class="card-overlay">
+          <h2>Project 2</h2>
+          <p>Lorem ipsum dolor sit amet, </p>
+            <ul>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+            </ul>
+          <span class="price-tag">£500</span>
+        </div>
+        <button onclick="location.href='#'">View Project</button>
+      </div>
+      <div class="price-card">
+        <div class="image-container">
+          <img src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project 3">
+        </div>
+        <div class="card-overlay">
+          <h2>Project 3</h2>
+          <p>Lorem ipsum dolor sit amet, </p>
+            <ul>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+            </ul>
+          <span class="price-tag">£750</span>
+        </div>
+        <button onclick="location.href='#'">View Project</button>
+      </div>
+      <div class="price-card">
+        <div class="image-container">
+          <img src="https://images.unsplash.com/photo-1494783367193-149034c05e8f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project 4">
+        </div>
+        <div class="card-overlay">
+          <h2>Project 4</h2>
+          <p>Lorem ipsum dolor sit amet, </p>
+            <ul>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+              <li>consectetur adipisicing elit. Unde eius</li>
+            </ul>
+          <span class="price-tag">£1000</span>
+        </div>
+        <button onclick="location.href='#'">View Project</button>
+      </div>
+    </div>
+
+  </section>
+
+  
+<!-- Section 4.0 Information -->
+  
+<!-- Section 4 Contact -->
+    
+<section id="contact" class="section">
+  <h1>Contact</h1>
+  
+<!-- Right side: Form -->
+  <form action="https://example.com/submit-form" method="POST" class="contact-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Floating Contact Icons -->
+  <div class="contact-popup">
+    <!-- Email Icon -->
+    <a href="mailto:copyrightemail@outlook.com" class="contact-icon email-icon" tabindex="0">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <!-- Phone Icon -->
+    <a href="tel:1234567890" class="contact-icon phone-icon" tabindex="0">
+      <i class="fas fa-phone"></i>
+    </a>
   </div>
+</section>
+  
+<!-- Scroll-up arrow near end -->
+<div class="scroll-up-hover-area"></div>
+<div class="scroll-up-popup">
+  <a href="#nav-wrapper" class="scroll-up-icon"><i class="fa-solid fa-angle-up"></i></a>
 </div>
 
-<!-- Section 4 Contact Us -->
-<div class="contact">
-  <div class="contact-form">
-    <iframe width="640px" height="480px" src="https://forms.office.com/r/UM0qYWgYYE?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-  </div>
-</div>
-
-<!-- Section 5 Footer -->
-<footer>
-  <div class="email-left">
-    <p>Baitul-properties@gmail.com
-    <span></span>
-    07689 123400</p>
-  </div>
-  <div class="social-media-icons">
-    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
+<!------------------------ Footer -------------------------------->
+<footer id="footer" class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 AP Design. All rights reserved.</p>
   </div>
 </footer>
-
-<script src="script.js"></script>
+</body>
+<script src="js/script.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/typewriter.js"></script>
+<script src="js/scrollup.js"></script>
+<script src="https://kit.fontawesome.com/163ae0cd45.js" crossorigin="anonymous"></script>
+</html>

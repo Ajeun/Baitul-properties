@@ -1,0 +1,271 @@
+/* --- Contact Section --- */
+#contact {
+    position: relative;
+    padding: 50px 40px;
+    background-color: hsl(300, 9%, 7%);
+    font-family: 'Roboto Flex', sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 60px;
+    background-image: url('https://images.unsplash.com/photo-1519010470956-6d877008eaa4?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-blend-mode: lighten;
+    scroll-margin-top: -18px;
+    background-size: cover, contain;
+      background-repeat: no-repeat, repeat;
+      background-position: center center, bottom right;
+    }
+  
+  
+  
+  #contact h1 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    font-family: 'Lato', sans-serif; /* Use Lato font for the text */
+    text-align: center;
+    text-decoration: underline 1.5px solid;
+    text-underline-offset: 20px;
+    border-top: 1.5px solid;
+  }
+  
+  /* --- Contact Form Container --- */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(23, 12, 12, 0.21);
+    backdrop-filter: blur(10px) saturate(130%);
+    -webkit-backdrop-filter: blur(10px) saturate(130%);
+    border: 1px solid rgba(209, 213, 219, 0.2);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* --- Form Labels --- */
+  .contact-form label {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  /* --- Inputs + Textarea --- */
+  .contact-form input,
+  .contact-form textarea {
+    font-family: 'Roboto Flex', sans-serif;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* --- Submit Button --- */
+  .contact-form button[type="submit"] {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    background-color: hsl(330, 8%, 55%);
+    color: #090809;
+    transform: translateY(-2px);
+  }
+  
+  /* ------------------ Floating Contact Icons ------------------- */
+  
+  /* Floating container */
+  
+  .contact-popup {
+    position: absolute;
+    bottom: 50px;
+    left: 30px; /* or right: 30px for right side */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px; /* Gap between icons */
+  }
+  
+  .contact-popup a {
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  /* Base styling for each contact icon */
+  .contact-icon {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px) saturate(200%);
+    -webkit-backdrop-filter: blur(12px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 21px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Adjust size of the icon circle */
+    height: 50px;
+  }
+  
+  /* Email icon hover interaction */
+  .contact-icon.email-icon:hover {
+    transform: translateY(-3px) scale(1.015); /* Raises the email icon */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+  }
+  
+  /* Phone icon hover interaction */
+  .contact-icon.phone-icon:hover {
+    transform: translateY(-3px) scale(1.015); /* Raises the phone icon */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+  }
+  
+
+  /* Small Screens (Mobile) */
+@media (max-width: 767px) {
+  #contact {
+    padding: 40px 20px;
+    background-position: center center;
+  }
+
+  #contact h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-underline-offset: 10px;
+  }
+
+  .contact-form {
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-form button[type="submit"] {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .contact-popup {
+    bottom: 20px;
+    left: 20px;
+    gap: 10px;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    padding: 12px;
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #contact {
+    padding: 50px 30px;
+  }
+
+  #contact h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .contact-form {
+    padding: 25px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .contact-form button[type="submit"] {
+    font-size: 17px;
+    padding: 11px 22px;
+  }
+
+  .contact-popup {
+    bottom: 40px;
+    left: 25px;
+    gap: 12px;
+  }
+
+  .contact-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 19px;
+    padding: 14px;
+  }
+}
+
+/* Large Screens (Desktops) */
+@media (min-width: 1025px) {
+  #contact {
+    padding: 50px 40px;
+  }
+
+  #contact h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .contact-form {
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+
+  .contact-form button[type="submit"] {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  .contact-popup {
+    bottom: 50px;
+    left: 30px;
+    gap: 15px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+    padding: 15px;
+  }
+}

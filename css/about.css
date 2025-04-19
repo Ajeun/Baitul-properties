@@ -1,0 +1,96 @@
+/* -------------------- About Styles --------------------------- */
+.about-section {
+    display: flex;
+     /* Ensures image is on the left-hand side */
+    padding: 20px;
+    background-color: var(--darker-background-color);
+}
+
+
+.text-mask {
+    color: transparent;
+    text-align: center;
+    font-size: 8em;
+    font-family: sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1546803073-23568b8c98e6?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 900; /* Increased font weight for bolder text */
+    letter-spacing: -2px; /* Reduced gap between letters */
+    line-height: 1.2; /* Adjusted line height to reduce gap between lines */
+}
+
+.about-text {
+    display: flex;
+    color: hsla(0, 0%, 100%, 0.839);
+    align-self: center;
+    flex-direction: column;
+    justify-content: space-between 2px;
+    align-content: space-around;
+    flex-grow: 1;
+    margin-top: 0px;
+    margin-left: 60px;
+}
+
+.about-text h1 {
+    margin-top: -72px;
+    margin-bottom: 35px;
+    align-self: center;
+    font-family: 'Lato', sans-serif; /* Use Lato font for the text */
+    font-size: 20px;
+    text-decoration: underline 1.5px solid;
+    text-underline-offset: 6px;
+    justify-content: flex-end;
+}
+
+.about-text {
+   width: 500px;
+   align-self: center;
+   margin-right: 90px;
+   margin-top: 10px; 
+}
+
+/* Media Queries */
+
+/* Default (desktop) styles already good */
+
+@media (max-width: 768px) {
+    .about-section {
+      flex-direction: column; /* Stack vertically */
+      padding: 15px;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .text-mask {
+      font-size: 3em; /* Reduce from 8em */
+      letter-spacing: -1px;
+      line-height: 1.1;
+      background-size: cover;
+      margin-bottom: 20px;
+    }
+  
+    .about-text {
+      width: 100%;
+      margin: 0;
+      padding: 0 20px;
+      align-items: center;
+    }
+  
+    .about-text h1 {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .text-mask {
+      font-size: 2.2em;
+    }
+  
+    .about-text h1 {
+      font-size: 16px;
+    }
+  }
+  

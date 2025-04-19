@@ -1,0 +1,68 @@
+/* ------------------Working Slideshow! ------------------------ */
+.slideshow-container {
+    position: relative;
+    width: 100%; /* Full container width */
+    height: 95vh; /* Set height to match the slides */
+    overflow: hidden;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 0.2em; /* Slightly increased letter spacing for better readability */
+    font-weight: 700;
+    font-size: 1.5em; /* Increased font size for better visibility */
+}
+
+/* Adjusting the slides to stack atop each other */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for visibility */
+}
+
+.slide img {
+    display: block;
+    width: 100%; /* Full container width */
+    height: 95vh; /* Full viewport height */
+    object-fit: cover; /* Ensures images fit without distortion */
+}
+
+/* Make the first slide visible by default */
+.slide:first-child {
+    opacity: 1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Lighter semi-transparent black backgrond */
+    color: #f0f0f0dd; /* White text */
+    text-align: right;
+    padding: 20px;
+    font-size: 3em; /* Larger text size */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1; /* Ensure it appears above images */
+}
+.text-overlay p {
+    font-family: 'Lato', sans-serif; /* Use Lato font for the text */
+    font-weight: 300; /* Lighter weight for the text */
+    font-size: 90px;
+    animation: fadeInOut 4s infinite; /* Match the JavaScript interval (4s) */
+    animation-delay: 0s; /* Remove delay for better synchronization */
+    animation-timing-function: cubic-bezier(.42,0,.92,.9); /* Smoother dissolve effect */
+}
+
+@keyframes fadeInOut {
+    0%, 10% { opacity: 0.7; } /* Fully transparent at the start */
+     /* Gradually become semi-transparent */
+    50%, 70% { opacity: 0.9; } /* Fully visible for a longer duration */
+    /* Gradually fade to semi-transparent */
+    100% { opacity: 0.7; } /* Fully transparent at the end */
+}
