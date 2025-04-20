@@ -221,16 +221,43 @@
     padding-bottom: 25px; /* Increase bottom padding for more space */
   }
 
+  .card-overlay ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .card-overlay li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .card-overlay li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(180, 120, 255, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(180, 120, 255, 0.4);
+  }
+  
+  
+  
   /* Media Queries */
 
-  /* -------- Mobile Portrait (≤480px) -------- */
+/* -------- Mobile Portrait (≤480px) -------- */
 @media (max-width: 480px) {
   #prices {
     padding: 20px;
   }
 
   #prices h1 {
-    font-size: 24px;
+    font-size: 28px;
     text-underline-offset: 5px;
   }
 
@@ -238,6 +265,7 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
 
   .price-card {
     flex-direction: column !important;
@@ -254,20 +282,27 @@
   }
 
   .card-overlay h2 {
-    font-size: 18px;
+    font-size: 22px;
+    padding-top: 0;
   }
 
   .card-overlay p,
   .card-overlay li {
-    font-size: 13.5px;
+    font-size: 15px;
+    line-height: 1.8;
   }
+
+  .card-overlay li::before {
+    left: 0.5em;
+    top: 0.8em;
 
   .price-card button {
     position: static;
     opacity: 1;
     visibility: visible;
-    margin: 15px auto 0;
+    margin: -40px auto 20px; /* Adjusted margin */
     transform: none;
+    
   }
 
   .price-tag {
@@ -276,6 +311,7 @@
   }
 }
 
+
 /* -------- Tablet Portrait (481px–768px) -------- */
 @media (min-width: 481px) and (max-width: 768px) {
   #prices {
@@ -283,7 +319,7 @@
   }
 
   #prices h1 {
-    font-size: 28px;
+    font-size: 42px;
   }
 
   .price-cards {

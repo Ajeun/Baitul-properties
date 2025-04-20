@@ -222,25 +222,36 @@
 
 /* ---------------- Mobile Phones (Portrait, ~480px and below) ---------------- */
 
+  /* ✅ Override only when revealed */
+  #read-more-toggle:checked ~ .read-more-content {
+    max-height: 3200px; /* Enough space for 4 stacked cards on mobile */
+    opacity: 1;
+    overflow: visible;
+  }
+
+
+/* ---------------- Mobile Phones (Portrait, ~480px and below) ---------------- */
 @media screen and (max-width: 480px) {
   .typewriter-container {
-    padding: 20px;
+    padding: 15px 20px;
+    max-width: 199px;
+    margin: 0 auto;
     height: auto;
     text-align: center;
   }
 
-  .card .btn {
-  transition: background-color 0.15s;
+  .typewriter {
+    font-size: 31px;
   }
 
-  .typewriter {
-    font-size: 30px;
+  .card .btn {
+    transition: background-color 0.15s;
   }
 
   .card-container,
   .card-container-2 {
     grid-template-columns: 1fr;
-    padding: 10px;
+    padding: 10px 20px;
     gap: 15px;
   }
 
@@ -253,10 +264,12 @@
   .read-more-label {
     font-size: 16px;
     padding: 8px 14px;
+    margin-bottom: 0;
   }
 
   .card-container-2 {
-    padding-bottom: 80px; /* Ensure space for bottom cards */
+    padding-bottom: 20px; /* Ensure space for bottom cards */
+    padding-top: 0; /* Remove top padding for mobile */
   }
 
   /* ✅ Override only when revealed */
@@ -264,11 +277,25 @@
     max-height: 3200px; /* Enough space for 4 stacked cards on mobile */
     opacity: 1;
     overflow: visible;
+    padding-top: 0;
   }
+
+  .read-more-wrapper {
+    margin-bottom: 0;
+  }
+
+  #read-more-toggle:checked ~ .read-more-content .card:first-child {
+    margin-top: 20px;  /* Pull up card no. 5 */
+  }
+
+    /* Increase bottom spacing when "Read More" is not clicked */
+  #read-more-toggle:not(:checked) ~ .read-more-wrapper {
+    margin-bottom: 20px; /* Adjust this value to control the bottom space */
+  }
+ 
 }
 
-/* ---------------- Tablets (Portrait, e.g., iPad ~768px) ---------------- */
-
+/* ---------------- Tablets (Portrait, ~481px to 1024px) ---------------- */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .typewriter-container {
     padding: 40px;
@@ -300,8 +327,15 @@
   #read-more-toggle:checked ~ .read-more-content {
     max-height: 1600px; /* 4 cards in 2 columns */
     opacity: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .read-more-wrapper {
+    margin-bottom: 0;
+  }
+
+  #read-more-toggle:checked ~ .read-more-content .card:first-child {
+    margin-top: 10px;  /* Pull up card no. 5 */
   }
 }
-
-/* ---------------- Desktop (Default Styles) ---------------- */
-/* No changes needed unless you're adding even bigger screens */
