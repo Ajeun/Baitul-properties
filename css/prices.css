@@ -336,110 +336,168 @@
 }
 
 
-/* -------- Tablet Portrait (481px–1024px) -------- */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 900px) {
   #prices {
-    padding: 40px;
-    text-align: center;
+    padding: 20px;
+    padding-bottom: 40px;
   }
 
   #prices h1 {
-    font-size: 32px;
+    font-size: 28px;
+    text-underline-offset: 5px;
   }
 
   .price-cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
   }
 
   .price-card {
     flex-direction: column !important;
-    margin: 10px auto; /* Center cards */
-    max-width: 95%; /* Make sure cards don’t stretch too wide */
   }
 
   .image-container {
     width: 100%;
-    height: 200px; /* Keep consistent height for images */
+    height: 180px;
   }
 
   .card-overlay {
-    padding: 20px;
+    padding: 16px;
     text-align: center;
   }
 
   .card-overlay h2 {
-    font-size: 20px;
+    font-size: 22px;
+    padding-top: 0;
   }
 
   .card-overlay p,
   .card-overlay li {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .card-overlay li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(180, 120, 255, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(180, 120, 255, 0.4);
+  }
+
+  /* Apply styles for even and odd price cards */
+  .price-card:nth-of-type(even) .card-overlay li::before {
+    left: 3.5px;  /* Adjust position for even price cards */
+    top: 0.8em;  /* Slightly adjusted vertical position */
+  }
+
+  .price-card:nth-of-type(odd) .card-overlay li::before {
+    left: 3.5px;  /* Adjust position for odd price cards */
+    top: 0.8em; /* Debugging border */
   }
 
   .price-card button {
     position: static;
     opacity: 1;
     visibility: visible;
-    margin: 15px auto 0;
+    margin: -40px auto 20px;
     transform: none;
   }
 
   .price-tag {
-    font-size: 13px;
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .price-card:nth-of-type(3) .card-overlay ul,
+  .price-card:nth-of-type(4) .card-overlay ul {
+    max-height: 270px; /* Optional: Limit the height if necessary */
+    overflow: visible;  /* Optional: Hide content that overflows */
   }
 }
 
-/* -------- Tablet Landscape (769px–1024px) -------- */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 901px) and (max-width: 1200px) {
   #prices {
-    padding: 40px;
-    text-align: center;
+    padding: 30px; /* Reduced padding for better use of space */
+    padding-bottom: 40px; /* Reduced bottom padding */
   }
 
-  #prices h1 {
-    font-size: 32px;
-  }
-
+  /* Price Cards Grid Layout */
   .price-cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for landscape */
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns */
+    gap: 30px; /* Reduced gap between cards */
   }
 
+  /* Price Card Styling */
   .price-card {
-    flex-direction: column !important;
-    margin: 10px auto;
-    max-width: 95%;
+    padding: 0; /* No additional padding on the card */
+    gap: 16px; /* Adjusted gap for contents inside the card */
+    min-height: 220px; /* Reduced min-height */
+    background-color: hsl(300, 10%, 10%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: row; /* Ensure row layout for price cards */
+    align-items: center;
   }
 
+  /* Image Container Styles */
   .image-container {
-    width: 100%;
-    height: 200px;
+    width: 160px; /* Reduced width for better fit */
+    height: 100%;
+    padding: 0;
+    flex-shrink: 0;
   }
 
+  .image-container img {
+    object-fit: cover;
+  }
+
+  /* Card Overlay Styling */
   .card-overlay {
-    padding: 20px;
-    text-align: center;
+    padding: 12px 0px; /* Standard padding for all cards */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures space is used efficiently */
+  }
+
+  /* Apply extra padding on left side of odd cards (where text is on the left side) */
+  .price-card:nth-of-type(even) .card-overlay {
+    padding: 0 5px 0 28px; /* Increased left padding for odd cards */
+  }
+
+  /* Apply extra padding on right side of even cards (where text is on the right side) */
+  .price-card:nth-of-type(odd) .card-overlay {
+    padding-right: 20px; /* Increased right padding for even cards */
   }
 
   .card-overlay h2 {
-    font-size: 20px;
+    font-size: 20px; /* Reduced font size */
+    margin-bottom: 15px;
   }
 
-  .card-overlay p,
-  .card-overlay li {
-    font-size: 14px;
-  }
-
-  .price-card button {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    margin: 15px auto 0;
-    transform: none;
+  .card-overlay p {
+    font-size: 13px; /* Smaller font size */
+    line-height: 1.4;
+    margin-bottom: 15px; /* Reduced margin */
   }
 
   .price-tag {
-    font-size: 14px;
+    font-size: 14px; /* Slightly reduced font size for the price tag */
+  }
+
+  /* Price tag adjustments */
+  .price-tag {
+    font-size: 14px; /* Slightly smaller price tag */
+    padding: 5px 10px; /* Adjusted padding for price tag */
   }
 }
+
+/* -------- Desktop (≥1029px) -------- */
