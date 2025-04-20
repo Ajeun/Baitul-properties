@@ -85,37 +85,37 @@
     }
   }
 
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
 
-    .about-section {
-      margin: 0;
-      padding: 30px 0 0 0;
-    }
-
-    .text-mask {
-      font-size: 3.4rem;
-      margin: 0 0 10px 0;
-      margin-top: -25px;
-      background-size: 32.8% auto;
-      /* NEW: control how the image shows inside the text */
-       /* or try: contain */
-      background-position: center top; /* or center bottom, left center, etc. */
-    }
-  
-    .about-text {
-      width: 100%;
-      margin: 0px;
-      padding: 0;
-      background-color: var(--lighter-background-color);  
-    }
-
-    .about-text h1 {
-      font-size: 1.45rem;
-    }
-
-    .about-text-content{
-      font-size: 1.05rem;
-      margin: 5px 30px 40px 30px;
-    }
+  .about-section {
+    margin: 0;
+    padding: 30px 0 0 0;
   }
+
+  .text-mask {
+    font-size: 3.4rem;
+    margin: 0 0 10px 0;
+    margin-top: -22px;
+    background-size: 32.8% auto;
+    /* NEW: control how the image shows inside the text */
+      /* or try: contain */
+    background-position: center top; /* or center bottom, left center, etc. */
+  }
+
+  .about-text {
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+    background-color: var(--lighter-background-color);  
+  }
+
+  .about-text h1 {
+    font-size: 1.45rem;
+  }
+
+  .about-text-content{
+    font-size: 1.05rem;
+    margin: 5px 30px 40px 30px;
+  }
+}
   
