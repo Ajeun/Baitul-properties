@@ -229,6 +229,10 @@
     text-align: center;
   }
 
+  .card .btn {
+  transition: background-color 0.15s;
+  }
+
   .typewriter {
     font-size: 30px;
   }
