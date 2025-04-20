@@ -7,6 +7,7 @@
     background-color: var(--background-color); /* Darker background for contrast */
     display: grid;
     place-items: center;
+    justify-self: center;
 }
 
 .typewriter {
@@ -17,6 +18,7 @@
   white-space: nowrap;
   visibility: hidden;
   width: 0; /* hides the text until animated */
+  max-width: fit-content;
 }
 
 .typewriter.animate {
@@ -373,33 +375,26 @@
   
   .card {
     padding: 10px 10px 5px 10px;
-    height: 550px;
+    height: 600px;
     margin: 0;
+    font-size: 1.05em;
+  }
+
+  .card img {
+    height: 250px;
   }
 
   .card .btn {
     margin: 0 0 10px 0;
   }
 
-  
-.typewriter-container {
-padding: 20px 495px 10px 495px;
-font-family: monospace, sans-serif;
-height: 20vh; /* Full viewport height */
-background-color: var(--background-color); /* Darker background for contrast */
-display: grid;
-place-items: center;
-}
+  .card h2, .card p {
+    margin-top: 50px;
+  }
 
-.typewriter {
-border-right: 2px solid rgba(255,255,255,.75);
-font-size: 50px;
-text-align: center;
-overflow: hidden;
-white-space: nowrap;
-visibility: hidden;
-width: 0; /* hides the text until animated */
-}
+  .typewriter {
+    min-width: 250px;
+  }
 }
 
 @media (min-width: 1201px) {
@@ -435,5 +430,7 @@ width: 0; /* hides the text until animated */
     height: 250px;
   }
 
-  .typewriter
+  .typewriter {
+    min-width: 250px;
+  }
 }
