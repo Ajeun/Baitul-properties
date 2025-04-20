@@ -101,9 +101,9 @@
   }
   
   .card .btn {
-    font-family: 'Roboto Flex', sans-serif;  /* Corrected font family */
-    font-weight: 400;  /* Start with light weight for testing */
-    font-stretch: 100%;  /* Start with normal stretch */
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 400;
+    font-stretch: 100%;
     padding: 10px 20px;
     margin-top: 8px;
     border: none;
@@ -114,12 +114,16 @@
     transition: background-color 0.3s;
   }
   
-
-  .card .btn:hover {  
+  .card .btn:hover {
     background-color: hsl(330, 8%, 55%);
-    font-weight: 500;  /* Set to a heavier weight for testing */
-    font-stretch: 90%;  /* Condensed font stretch */
+    font-weight: 500;
+    font-stretch: 90%;
     color: #090809;
+  }
+  
+  .card .btn:active {
+    background-color: hsl(330, 8%, 55%); /* Match hover color */
+    box-shadow: none; /* Remove any default active state shadow */
   }
   
   
