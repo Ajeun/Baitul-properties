@@ -1,6 +1,6 @@
 /* --------------------- Navigation Styles --------------------- */
 nav {
-    height: 58%;
+    height: 50%;
     max-width: 20vw;
     position: relative;
     top: 0;
@@ -39,26 +39,25 @@ nav ul li {
     line-height: 1; /* Adjust line height for better spacing */
     word-wrap: break-word; /* Ensure long text wraps within the container */
 }
-
 nav ul li a {
-    display: flex; /* Use flexbox for consistent alignment */
-    justify-content: center; /* Align text and hover effect */
-    align-items: center; /* Center align items vertically */
-    width: 150px; /* Ensure all links have the same width */
-    margin-left: 0; /* Remove left margin for consistency */
-    padding: 1rem; /* Adjust padding for better spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    padding: 1rem;
     margin-left: 32px;
-    position: relative; /* Ensure positioning is relative for better control */
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for hover effect */
-    box-sizing: border-box; /* Include padding and border in width */
+    position: relative;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-radius 0.3s ease-in-out; /* Add border-radius transition */
+    border-radius: 7px; /* Ensure border-radius is applied in both normal and hover states */
+    box-sizing: border-box;
 }
 
 nav ul li a:hover {
-    background-color: var(--secondary-color); /* Colored box on hover */
-    color: var(--text-color); /* Ensure text color contrasts with the box */
-    border-radius: 7px; /* Optional: Add rounded corners to the box */
-    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 7px; /* Keep the border-radius on hover */
 }
+
 
 
 nav li:nth-child(1) {
@@ -72,10 +71,10 @@ nav.active {
 /* Navigation */
 .menu-icon {
     position: relative;
-    top: 15px;
-    left: 15px;
-    width: 2rem;
-    height: 2rem;
+    top: 9px;
+    left: 10px;
+    width: 2.2rem;
+    height: 1.88rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -84,7 +83,7 @@ nav.active {
 }
 
     .menu-icon div {
-        height: 0.25rem;
+        height: 0.22rem;
         background-color: var(--lighter-primary-color); /* Use a defined variable or a specific color */
         transition: all 0.3s ease-in-out;
     }
@@ -107,7 +106,7 @@ nav.active {
 }
 
 .nav-wrapper {
-    height: 60px;
+    height: 48px;
     position: relative;
     top: 0;
     left: 0;
@@ -146,18 +145,7 @@ nav.active {
 
 
 /* Adjust position for larger screens (tablet and up) */
-@media screen and (min-width: 769px) {
-    .menu-icon {
-        position: absolute; /* Keep it at the top of the page */
-        top: 15px;
-        left: 20px;
-        z-index: 999;
-    }
 
-    nav {
-        position: absolute; /* Still position the nav at the top, but not fixed on scroll */
-    }
-}
 
 @media screen and (max-width: 480px) {
 
