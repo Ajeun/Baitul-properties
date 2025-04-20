@@ -69,21 +69,33 @@
 
 /* ---------------- Mobile Phones (Portrait, ~480px and below) ---------------- */
 
-@media screen and (max-width: 480px) {
-    .text-overlay p {
-        font-size: 1em; /* Smaller text size for mobile */
-        padding: 10px; /* Reduced padding for mobile */
+@media screen and (max-width: 600px) {
+
+    .text-overlay {
+        height: 95vh;
+        padding: 0;
     }
 
+    .text-overlay p {
+        font-size: 3.85rem; /* Smaller text size for mobile */
+        position: relative;
+        top: -20px;
+        white-space: normal;
+        display: inline-block;
+        max-width: 95vw;
+        padding: 0 25px 0 20px; /* Reduced padding for mobile */
+    }
+
+    .text-overlay p::after {
+        content: "";
+        display: block;
+      }
+
     .slideshow-container {
-        height: 99vh; /* Reduced height for mobile */
+        height: 95vh; /* Reduced height for mobile */
     }
   }
   
   /* ---------------- Tablets (Portrait, e.g., iPad ~768px) ---------------- */
-  
-  @media screen and (min-width: 481px) and (max-width: 1024px) {
-    
-  }
   
  

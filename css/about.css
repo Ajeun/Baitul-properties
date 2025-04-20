@@ -21,6 +21,7 @@
     line-height: 1.2; /* Adjusted line height to reduce gap between lines */
 }
 
+
 .about-text {
     display: flex;
     color: hsla(0, 0%, 100%, 0.839);
@@ -89,11 +90,15 @@
     .about-section {
       margin: 0;
       padding: 0;
+      position: absolute;
+      z-index: 100;
     }
 
     .text-mask {
       font-size: 3.4rem;
-      margin: 25px 0px;
+      margin: 0 0 10px 0;
+      margin-top: -25px;
+      object-position: center bottom;
     }
   
     .about-text {
