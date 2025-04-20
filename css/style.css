@@ -41,6 +41,7 @@ h2 {
     padding-top: 1rem; /* Add space above the h2 */
 }
 
+
 /* Footer */
 #footer {
     background-color: #141014;
@@ -48,6 +49,7 @@ h2 {
     padding: 20px;
     bottom: 0;
     width: 100%;
+    position: relative; /* Ensure footer stays at the bottom */
 }
 
 .footer-content {
