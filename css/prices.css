@@ -254,6 +254,7 @@
 @media (max-width: 480px) {
   #prices {
     padding: 20px;
+    padding-bottom: 34px; /* Added bottom padding for mobile */
   }
 
   #prices h1 {
@@ -263,7 +264,7 @@
 
   .price-cards {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 26px;
   }
 
 
@@ -295,6 +296,7 @@
   .card-overlay li::before {
     left: 0.5em;
     top: 0.8em;
+  }
 
   .price-card button {
     position: static;
@@ -310,6 +312,7 @@
     padding: 5px 8px;
   }
 }
+
 
 
 /* -------- Tablet Portrait (481px–768px) -------- */

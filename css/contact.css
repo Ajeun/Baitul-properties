@@ -145,14 +145,14 @@
   /* Small Screens (Mobile) */
 @media (max-width: 767px) {
   #contact {
-    padding: 40px 20px;
+    padding: 40px 20px 80px;
     background-position: center center;
   }
 
   #contact h1 {
     font-size: 28px;
-    margin-bottom: 20px;
-    text-underline-offset: 10px;
+    margin-bottom: 23px;
+    text-underline-offset: 13px;
   }
 
   .contact-form {
@@ -173,14 +173,15 @@
   }
 
   .contact-popup {
-    bottom: 20px;
+    bottom: 19px;
     left: 20px;
     gap: 10px;
+    flex-direction: row;
   }
 
   .contact-icon {
-    width: 40px;
-    height: 40px;
+    width: 41px;
+    height: 41px;
     font-size: 18px;
     padding: 12px;
   }
