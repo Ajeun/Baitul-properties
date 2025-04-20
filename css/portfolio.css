@@ -233,8 +233,8 @@
 /* ---------------- Mobile Phones (Portrait, ~480px and below) ---------------- */
 @media screen and (max-width: 480px) {
   .typewriter-container {
-    padding: 15px 20px;
-    max-width: 199px;
+    padding: 15px 18px;
+    max-width: 210px;
     margin: 0 auto;
     height: auto;
     text-align: center;

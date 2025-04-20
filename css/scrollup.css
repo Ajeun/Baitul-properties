@@ -31,8 +31,8 @@
   
   /* The actual up arrow button */
   .scroll-up-icon {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.19);
     color: #ffffff;
     font-size: 24px;
     padding: 14px;
