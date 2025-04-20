@@ -254,7 +254,7 @@
 @media (max-width: 480px) {
   #prices {
     padding: 20px;
-    padding-bottom: 34px; /* Added bottom padding for mobile */
+    padding-bottom: 40px;
   }
 
   #prices h1 {
@@ -266,7 +266,6 @@
     grid-template-columns: 1fr;
     gap: 26px;
   }
-
 
   .price-card {
     flex-direction: column !important;
@@ -294,25 +293,47 @@
   }
 
   .card-overlay li::before {
-    left: 0.5em;
-    top: 0.8em;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(180, 120, 255, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(180, 120, 255, 0.4);
+  }
+
+  /* Apply styles for even and odd price cards */
+  .price-card:nth-of-type(even) .card-overlay li::before {
+    left: 3.5px;  /* Adjust position for even price cards */
+    top: 0.8em;  /* Slightly adjusted vertical position */
+  }
+
+  .price-card:nth-of-type(odd) .card-overlay li::before {
+    left: 11.5px;  /* Adjust position for odd price cards */
+    top: 0.8em; /* Debugging border */
   }
 
   .price-card button {
     position: static;
     opacity: 1;
     visibility: visible;
-    margin: -40px auto 20px; /* Adjusted margin */
+    margin: -40px auto 20px;
     transform: none;
-    
   }
 
   .price-tag {
     font-size: 12px;
     padding: 5px 8px;
   }
-}
 
+  .price-card:nth-of-type(3) .card-overlay ul,
+  .price-card:nth-of-type(4) .card-overlay ul {
+    max-height: 270px; /* Optional: Limit the height if necessary */
+    overflow: visible;  /* Optional: Hide content that overflows */
+  }
+}
 
 
 /* -------- Tablet Portrait (481px–768px) -------- */
