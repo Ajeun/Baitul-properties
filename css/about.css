@@ -94,10 +94,12 @@
 
     .text-mask {
       font-size: 3.4rem;
-      
       margin: 0 0 10px 0;
       margin-top: -25px;
-      object-position: center bottom;
+      background-size: 32.8% auto;
+      /* NEW: control how the image shows inside the text */
+       /* or try: contain */
+      background-position: center top; /* or center bottom, left center, etc. */
     }
   
     .about-text {
